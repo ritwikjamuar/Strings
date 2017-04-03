@@ -39,7 +39,7 @@ public class Strings2
 		 * Using == compares the String using reference given by access from String Constant Pool.
 		 */
 		String alpha = "Alpha";
-		String alpha2 = "rgrf";
+		String alpha2 = "Alpha";
 		String alpha3 = new String("Alpha");
 
 		System.out.println ( "Is alpha and alpha2 equal : " + ( alpha == alpha2 ) );
@@ -52,6 +52,31 @@ public class Strings2
 		 * Since alpha and alpha2 has same reference, so their comparison results in true boolean value.
 		 * But, alpha and alpha3 has different reference, as alpha resides in String Constant Pool,
 		 * while alpha3 resides in Heap Memory. So, their reference is not same.
+		 */
+
+		/* Comparison using comparesTo() <---------------------------*/
+
+		/*
+		 * comparesTo() method compares the two string lexicographically.
+		 * Lexicographical Comparison is similar to the ordering that one might find in a dictionary.
+		 *
+		 * So, comparesTo() method returns following in following conditions:
+		 *      # < 0 : when the String calling the method is lexicographically first ( comes first in a dictionary ).
+		 *      # == 0 : when the two strings are lexicographically equivalent.
+		 *      # > 0 : when the parameter passed to the compareTo method is lexicographically first.
+		 */
+
+		String mike = "Mike";
+		String mike2 = "Mike";
+		String mike3 = "MIKE";
+
+		System.out.println ( "Is mike and mike2 equal : " + mike.compareTo ( mike2 ) );
+		System.out.println ( "Is mike and mike3 equal : " + mike.compareTo ( mike3 ) );
+
+		/*
+		 * Here, mike and mike2 are lexicographically equal, so value returned is 0.
+		 * But, mike and mike3 are not lexicographically equal, as I > i, K > k, E > e,
+		 * so a +ve integer is returned in this case.
 		 */
 	}
 }
