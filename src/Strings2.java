@@ -34,11 +34,24 @@ public class Strings2
 		System.out.println ( "Is five and six equal : " + five.equalsIgnoreCase ( six ) );
 
 		/* Comparison using == operator <---------------------------*/
+
+		/*
+		 * Using == compares the String using reference given by access from String Constant Pool.
+		 */
 		String alpha = "Alpha";
 		String alpha2 = "rgrf";
 		String alpha3 = new String("Alpha");
 
 		System.out.println ( "Is alpha and alpha2 equal : " + ( alpha == alpha2 ) );
 		System.out.println ( "Is alpha and alpha3 equal : " + ( alpha == alpha3 ) );
+
+		/*
+		 * Here, alpha and alpha2 is created using String Literal.
+		 * And, alpha3 is created using new Keyword.
+		 *
+		 * Since alpha and alpha2 has same reference, so their comparison results in true boolean value.
+		 * But, alpha and alpha3 has different reference, as alpha resides in String Constant Pool,
+		 * while alpha3 resides in Heap Memory. So, their reference is not same.
+		 */
 	}
 }
