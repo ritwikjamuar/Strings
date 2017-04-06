@@ -26,8 +26,7 @@ public class Strings6
 		/* StringBuffer Method : append( String subString ) <-----------------------------------------------------------*/
 
 		/*
-		 * append( String subString ) : Returns StringBuffer instance which contains the original String along with
-		 *                              the String provided as the parameter.
+		 * append( String subString ) : Concatenates the given argument with String provided as parameter.
 		 *                              The append() method is overloaded like
 		 *                              append(char),
 		 *                              append(boolean),
@@ -167,7 +166,7 @@ public class Strings6
 		 * means that allocation is required to ensure that a minimum of 45 characters can be inserted
 		 * in our StringBuffer instance.
 		 *
-		 * So, allocation happens in our StringBuilder instance as:
+		 * So, allocation happens in our StringBuffer instance as:
 		 *           ( 34 * 2 ) + 2 = 70
 		 *
 		 * Thus, new capacity is 70 characters which can be seen as the output of line 148.
